@@ -1,13 +1,813 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="media.css" />
     <title>Document</title>
-</head>
-<body>
-    <div>
-        
+  </head>
+  <!-- <i class="fa-solid fa-bars"></i> -->
+
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logoContainer">
+          <a href="#" class="logo-link"
+            ><img src="./img/2mKablo_Logo@2x.png" class="header-logo"
+          /></a>
+        </div>
+        <div class="navbar">
+          <ul class="nav-list">
+            <li class="nav-list-el"><a href="#">KURUMSAL</a></li>
+            <li class="nav-list-el has-dropdown">
+              <a href="#">ÜRÜNLER</a>
+              <ul class="nav-products-options">
+                <li><a href="#">Enstrumantasyon Kabloları</a></li>
+                <li><a href="#">Kontrol Kabloları</a></li>
+                <li><a href="#">Enerji Kabloları</a></li>
+                <li><a href="#">Gemi & Yat Kabloları</a></li>
+                <li><a href="#">Dahili Telefon ve Yangın Kabloları</a></li>
+                <li><a href="#">Bilgi İletişim Kabloları</a></li>
+                <li><a href="#">BUS Kablolar</a></li>
+                <li><a href="#">Servo Motor Kabloları</a></li>
+                <li><a href="#">Koaksiyel Kablolar</a></li>
+                <li>
+                  <button class="nav-products-katalog">KATALOĞU GÖR</button>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-list-el"><a href="#">ÜRETİM</a></li>
+            <li class="nav-list-el"><a href="#">MEDYA</a></li>
+            <li class="nav-list-el"><a href="#">CPR</a></li>
+            <li class="nav-list-el"><a href="#">İLETİŞİM</a></li>
+          </ul>
+        </div>
+        <div class="navbar-tools">
+          <div>
+            <button class="search-window-bytc">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <div>
+            <a href="#"><i class="fa-solid fa-globe"></i> Türkçe</a>
+          </div>
+        </div>
+        <button class="mobilMenüTuş"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </header>
+    <div class="search-bar-window">
+      <div class="search-bar-container">
+        <div class="search-input-div">
+          <input
+            type="search"
+            placeholder="Aramak istediğinizi buraya yazınız "
+          />
+          <button class="search-bar-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div class="search-cancel-btn">
+          <button class="search-cancel-btn cancel-btn-item">
+            <i class="fa-solid fa-x"></i>
+          </button>
+        </div>
+      </div>
     </div>
-</body>
+
+    <div class="mobileMenu">
+      <div class="HamburgerList">
+        <ul>
+          <li>Kurumsal</li>
+          <li>
+            Ürünler
+            <div class="mobileDropdown">
+              <ul>
+                <li><a href="#">Enstrumantasyon Kabloları</a></li>
+                <li><a href="#">Kontrol Kabloları</a></li>
+                <li><a href="#">Enerji Kabloları</a></li>
+                <li><a href="#">Gemi & Yat Kabloları</a></li>
+                <li><a href="#">Dahili Telefon ve Yangın Kabloları</a></li>
+                <li><a href="#">Bilgi İletişim Kabloları</a></li>
+                <li><a href="#">BUS Kablolar</a></li>
+                <li><a href="#">Servo Motor Kabloları</a></li>
+                <li><a href="#">Koaksiyel Kablolar</a></li>
+                <li class="catalog">
+                  <a href="#">KATALOĞU GÖR</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>Üretim</li>
+          <li>Medya</li>
+          <li>CPR</li>
+          <li>İletişim</li>
+          <!-- <li><input type="search" /></li> -->
+        </ul>
+        <div class="hamburger-search-div">
+          <input type="search" /><i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="footer-colm1">
+          <div class="social-media-group-hamburger">
+            <h2>E-Bülten Üyeliği</h2>
+            <ul class="social-media-list">
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <span>|</span>
+              <li>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              </li>
+              <span>|</span>
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              </li>
+              <span>|</span>
+              <li>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mobil-filter-menu-container">
+      <button class="tuşfiltre" style="cursor: pointer;">Ürünler</button>
+      <div class="mobile-filter-menu">
+        <div class="filterContainer">
+          <ul class="FilterList">
+            <li class="filterCategory">
+              <ul class="CategoryElement">
+                <div class="FilteredCategoryHeading">
+                  <h2 class="FilterCategoryCaption">Kategori</h2>
+                  <button class="toggle-button">
+                    <!-- <i class="fa-solid fa-plus"></i> --><i
+                      class="fa-solid fa-minus"
+                    ></i>
+                  </button>
+                </div>
+                <div class="filter-options">
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">Endüstri</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">Enerji Üretim</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">Petrokimya</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">Ulaşım</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">İnşaat</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">Özel Tasarım Kablolar</label>
+                  </li>
+                </div>
+              </ul>
+            </li>
+            <li class="filterCategory">
+              <ul class="CategoryElement">
+                <div class="FilteredCategoryHeading">
+                  <h2 class="FilterCategoryCaption">Uygulama</h2>
+                  <button class="toggle-button">
+                    <!-- <i class="fa-solid fa-plus"></i> --><i
+                      class="fa-solid fa-minus"
+                    ></i>
+                  </button>
+                </div>
+                <div class="filter-options">
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">Zırhsız Enerji Kabloları</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">Zırhlı Enerji Kabloları</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">Enerji Kabloları</label>
+                  </li>
+                </div>
+              </ul>
+            </li>
+            <li class="filterCategory">
+              <ul class="CategoryElement">
+                <div class="FilteredCategoryHeading">
+                  <h2 class="FilterCategoryCaption">Belgelendirme</h2>
+                  <button class="toggle-button">
+                    <!-- <i class="fa-solid fa-plus"></i> --><i
+                      class="fa-solid fa-minus"
+                    ></i>
+                  </button>
+                </div>
+                <div class="filter-options">
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">CSA (12)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">UL (21)</label>
+                  </li>
+                </div>
+              </ul>
+            </li>
+            <li class="filterCategory">
+              <ul class="CategoryElement">
+                <div class="FilteredCategoryHeading">
+                  <h2 class="FilterCategoryCaption">Belgelendirme</h2>
+                  <button class="toggle-button">
+                    <!-- <i class="fa-solid fa-plus"></i> --><i
+                      class="fa-solid fa-minus"
+                    ></i>
+                  </button>
+                </div>
+                <div class="filter-options">
+                  <li>
+                    <input type="checkbox" 1 />
+                    <label for="#">1 (17)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 2 />
+                    <label for="#">6 (9)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 3 />
+                    <label for="#">7 (18)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 1 />
+                    <label for="#">3 (17)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 2 />
+                    <label for="#">7 (9)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 3 />
+                    <label for="#">8 (18)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 1 />
+                    <label for="#">1 (17)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 2 />
+                    <label for="#">6 (9)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 3 />
+                    <label for="#">7 (18)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 1 />
+                    <label for="#">3 (17)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 2 />
+                    <label for="#">7 (9)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 3 />
+                    <label for="#">8 (18)</label>
+                  </li>
+                </div>
+              </ul>
+            </li>
+            <li class="filterCategory">
+              <ul class="CategoryElement">
+                <div class="FilteredCategoryHeading">
+                  <h2 class="FilterCategoryCaption">Yalıtım Tipi</h2>
+                  <button class="toggle-button">
+                    <!-- <i class="fa-solid fa-plus"></i> --><i
+                      class="fa-solid fa-minus"
+                    ></i>
+                  </button>
+                </div>
+                <div class="filter-options">
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">PVC (17)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">XLP (9)</label>
+                  </li>
+                </div>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <main>
+      <div class="leftSide">
+        <!-- <div class="BreadCrumbDiv" id="BreadCrumbDiv"></div> -->
+        <div class="filterContainer">
+          <ul class="FilterList">
+            <li class="filterCategory">
+              <ul class="CategoryElement">
+                <div class="FilteredCategoryHeading">
+                  <h2 class="FilterCategoryCaption">Kategori</h2>
+                  <button class="toggle-button">
+                    <!-- <i class="fa-solid fa-plus"></i> --><i
+                      class="fa-solid fa-minus"
+                    ></i>
+                  </button>
+                </div>
+                <div class="filter-options">
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">Endüstri</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">Enerji Üretim</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">Petrokimya</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">Ulaşım</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">İnşaat</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">Özel Tasarım Kablolar</label>
+                  </li>
+                </div>
+              </ul>
+            </li>
+            <li class="filterCategory">
+              <ul class="CategoryElement">
+                <div class="FilteredCategoryHeading">
+                  <h2 class="FilterCategoryCaption">Uygulama</h2>
+                  <button class="toggle-button">
+                    <!-- <i class="fa-solid fa-plus"></i> --><i
+                      class="fa-solid fa-minus"
+                    ></i>
+                  </button>
+                </div>
+                <div class="filter-options">
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">Zırhsız Enerji Kabloları</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">Zırhlı Enerji Kabloları</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">Enerji Kabloları</label>
+                  </li>
+                </div>
+              </ul>
+            </li>
+            <li class="filterCategory">
+              <ul class="CategoryElement">
+                <div class="FilteredCategoryHeading">
+                  <h2 class="FilterCategoryCaption">Belgelendirme</h2>
+                  <button class="toggle-button">
+                    <!-- <i class="fa-solid fa-plus"></i> --><i
+                      class="fa-solid fa-minus"
+                    ></i>
+                  </button>
+                </div>
+                <div class="filter-options">
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">CSA (12)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">UL (21)</label>
+                  </li>
+                </div>
+              </ul>
+            </li>
+            <li class="filterCategory">
+              <ul class="CategoryElement">
+                <div class="FilteredCategoryHeading">
+                  <h2 class="FilterCategoryCaption">Belgelendirme</h2>
+                  <button class="toggle-button">
+                    <!-- <i class="fa-solid fa-plus"></i> --><i
+                      class="fa-solid fa-minus"
+                    ></i>
+                  </button>
+                </div>
+                <div class="filter-options">
+                  <li>
+                    <input type="checkbox" 1 />
+                    <label for="#">1 (17)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 2 />
+                    <label for="#">6 (9)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 3 />
+                    <label for="#">7 (18)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 1 />
+                    <label for="#">3 (17)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 2 />
+                    <label for="#">7 (9)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 3 />
+                    <label for="#">8 (18)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 1 />
+                    <label for="#">1 (17)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 2 />
+                    <label for="#">6 (9)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 3 />
+                    <label for="#">7 (18)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 1 />
+                    <label for="#">3 (17)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 2 />
+                    <label for="#">7 (9)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" 3 />
+                    <label for="#">8 (18)</label>
+                  </li>
+                </div>
+              </ul>
+            </li>
+            <li class="filterCategory">
+              <ul class="CategoryElement">
+                <div class="FilteredCategoryHeading">
+                  <h2 class="FilterCategoryCaption">Yalıtım Tipi</h2>
+                  <button class="toggle-button">
+                    <!-- <i class="fa-solid fa-plus"></i> --><i
+                      class="fa-solid fa-minus"
+                    ></i>
+                  </button>
+                </div>
+                <div class="filter-options">
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">PVC (17)</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" />
+                    <label for="#">XLP (9)</label>
+                  </li>
+                </div>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mainContent">
+        <div class="productsTopBar">
+          <div class="productsHeading">
+            <h2>Yapı Kablo Ürünleri</h2>
+          </div>
+          <div class="productsFilterTools">
+            <div>
+              <span>
+                <label for="#">GÖRÜNÜM</label>
+                <select name="ListelemeSayısı">
+                  <option class="option" selected="" value="1">24</option>
+                  <option class="option" value="2">32</option>
+                  <option class="option" value="3">48</option>
+                  <option class="option" value="4">64</option>
+                </select>
+              </span>
+            </div>
+            <div>
+              <span class="archive-sort">
+                <label for="arrangement">SIRALAMA</label>
+                <select name="arrangement">
+                  <option class="option" selected="" value="01">A-Z</option>
+                  <option class="option" value="02">Z-A</option>
+                </select>
+              </span>
+            </div>
+            <div class="list-type-div">
+              <span class="list-style list-style-row"
+                ><i class="fa-solid fa-list"></i
+              ></span>
+              <span class="list-style list-style-grid"
+                ><i class="fa-solid fa-table-cells-large"></i
+              ></span>
+            </div>
+          </div>
+        </div>
+        <article class="ProductsTable">
+          <div class="productCard">
+            <div class="productBox">
+              <div>
+                <img src="./img/product_list_02.png" class="product-box-img" />
+              </div>
+              <div class="productSeries">RE-Y(St)Y-fl</div>
+              <div class="productOptions">
+                <button class="pdfDowlands">PDF İndir</button
+                ><button class="payNowBtn">Şimdi Al</button>
+              </div>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="productBox">
+              <div>
+                <img src="./img/product_list_02.png" class="product-box-img" />
+              </div>
+              <div class="productSeries">RE-Y(St)Y-fl</div>
+              <div class="productOptions">
+                <button class="pdfDowlands">PDF İndir</button
+                ><button class="payNowBtn">Şimdi Al</button>
+              </div>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="productBox">
+              <div>
+                <img src="./img/product_list_02.png" class="product-box-img" />
+              </div>
+              <div class="productSeries">RE-Y(St)Y-fl</div>
+              <div class="productOptions">
+                <button class="pdfDowlands">PDF İndir</button
+                ><button class="payNowBtn">Şimdi Al</button>
+              </div>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="productBox">
+              <div>
+                <img src="./img/product_list_02.png" class="product-box-img" />
+              </div>
+              <div class="productSeries">RE-Y(St)Y-fl</div>
+              <div class="productOptions">
+                <button class="pdfDowlands">PDF İndir</button
+                ><button class="payNowBtn">Şimdi Al</button>
+              </div>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="productBox">
+              <div>
+                <img src="./img/product_list_02.png" class="product-box-img" />
+              </div>
+              <div class="productSeries">RE-Y(St)Y-fl</div>
+              <div class="productOptions">
+                <button class="pdfDowlands">PDF İndir</button
+                ><button class="payNowBtn">Şimdi Al</button>
+              </div>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="productBox">
+              <div>
+                <img src="./img/product_list_02.png" class="product-box-img" />
+              </div>
+              <div class="productSeries">RE-Y(St)Y-fl</div>
+              <div class="productOptions">
+                <button class="pdfDowlands">PDF İndir</button
+                ><button class="payNowBtn">Şimdi Al</button>
+              </div>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="productBox">
+              <div>
+                <img src="./img/product_list_02.png" class="product-box-img" />
+              </div>
+              <div class="productSeries">RE-Y(St)Y-fl</div>
+              <div class="productOptions">
+                <button class="pdfDowlands">PDF İndir</button
+                ><button class="payNowBtn">Şimdi Al</button>
+              </div>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="productBox">
+              <div>
+                <img src="./img/product_list_02.png" class="product-box-img" />
+              </div>
+              <div class="productSeries">RE-Y(St)Y-fl</div>
+              <div class="productOptions">
+                <button class="pdfDowlands">PDF İndir</button
+                ><button class="payNowBtn">Şimdi Al</button>
+              </div>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="productBox">
+              <div>
+                <img src="./img/product_list_02.png" class="product-box-img" />
+              </div>
+              <div class="productSeries">RE-Y(St)Y-fl</div>
+              <div class="productOptions">
+                <button class="pdfDowlands">PDF İndir</button
+                ><button class="payNowBtn">Şimdi Al</button>
+              </div>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="productBox">
+              <div>
+                <img src="./img/product_list_02.png" class="product-box-img" />
+              </div>
+              <div class="productSeries">RE-Y(St)Y-fl</div>
+              <div class="productOptions">
+                <button class="pdfDowlands">PDF İndir</button
+                ><button class="payNowBtn">Şimdi Al</button>
+              </div>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="productBox">
+              <div>
+                <img src="./img/product_list_02.png" class="product-box-img" />
+              </div>
+              <div class="productSeries">RE-Y(St)Y-fl</div>
+              <div class="productOptions">
+                <button class="pdfDowlands">PDF İndir</button
+                ><button class="payNowBtn">Şimdi Al</button>
+              </div>
+            </div>
+          </div>
+          <div class="productCard">
+            <div class="productBox">
+              <div>
+                <img src="./img/product_list_02.png" class="product-box-img" />
+              </div>
+              <div class="productSeries">RE-Y(St)Y-fl</div>
+              <div class="productOptions">
+                <button class="pdfDowlands">PDF İndir</button>
+                <button class="payNowBtn">Şimdi Al</button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <div class="discovered-more-container">
+      <h2>Daha Fazlasını Keşfedin</h2>
+      <div class="discovered-more">
+        <div class="discovered">
+          <img src="img/discovery_01.jpg" class="discoveredimg" />
+
+          <h2 class="discoveredH2">Sürdürülebilirlik</h2>
+          <h3 class="discoveredH3">keşfet</h3>
+        </div>
+        <div class="discovered">
+          <img src="img/discovery_01.jpg" class="discoveredimg" />
+          <h2 class="discoveredH2">Sürdürülebilirlik</h2>
+          <h3 class="discoveredH3">Keşfet</h3>
+        </div>
+        <div class="discovered">
+          <img src="img/discovery_01.jpg" class="discoveredimg" />
+          <h2 class="discoveredH2">Sürdürülebilirlik</h2>
+          <h3 class="discoveredH3">Keşfet</h3>
+        </div>
+        <div class="discovered">
+          <img src="img/discovery_01.jpg" class="discoveredimg" />
+          <h2 class="discoveredH2">Sürdürülebilirlik</h2>
+          <h3 class="discoveredH3">Keşfet</h3>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-colm1">
+          <h2>Satış Ofisi</h2>
+          <p>
+            <a href="#">
+              Perpa Ticaret Merkezi A Blok Kat:2 No:9 / 21-22 Şişli-İstanbul /
+              Türkiye</a
+            >
+          </p>
+          <ul>
+            <li>
+              Telefon:
+              <a href="+90 (212) 222 82 50 (3 hat)"
+                >+90 (212) 222 82 50 (3 hat)</a
+              >
+            </li>
+            <li>Fax: <a href="+90 (212) 222 82 53">+90 (212) 222 82 53</a></li>
+            <li>GSM: <a href="+90 (533) 658 80 90"> +90 (533) 658 80 90</a></li>
+            <li>
+              E-Posta:<a href="mailto:satis@2mkablo.com">satis@2mkablo.com</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-colm1">
+          <h2>Fabrika</h2>
+          <p>
+            <a href="#"
+              >Fabrika Gaziosmanpaşa OSB Mahallesi 4.Cadde No:18 A 59500
+              Çerkezköy - Tekirdağ</a
+            >
+          </p>
+          <ul>
+            <li>
+              Telefon:
+              <a href="+90 (282) 758 35 00(3 hat)"
+                >+90 (282) 758 35 00(3 hat)</a
+              >
+            </li>
+            <li>Fax: <a href="+90 (282) 758 35 10">+90 (282) 758 35 10</a></li>
+            <li>GSM: <a href="+90 (530) 403 50 46"> +90 (530) 403 50 46</a></li>
+            <li>
+              E-Posta:<a href="mailto:info@2mkablo.com">info@2mkablo.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-colm1">
+          <h2>ABD</h2>
+          <p>
+            <a href="#"
+              >Pennzoil Place, 700 Milam St #1300, <br />
+              Houston, TX 77002, <br />
+              Amerika Birleşik Devletleri</a
+            >
+          </p>
+          <ul>
+            <li>
+              E-Posta:<a href="mailto: info@2mkablo.com"> info@2mkablo.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-colm1">
+          <h2>E-Bülten Üyeliği</h2>
+          <div class="footer-mail-input-Container">
+            <input type="email" placeholder="e mail adresinizi giriniz" />
+            <button>Kaydet</button>
+          </div>
+          <div class="kvkk-Checkbox">
+            <input type="checkbox" />
+            <label for="#">KVKK okudum onaylıyorum</label>
+          </div>
+          <div class="social-media-group">
+            <h2>E-Bülten Üyeliği</h2>
+            <ul class="social-media-list">
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <span>|</span>
+              <li>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+              </li>
+              <span>|</span>
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              </li>
+              <span>|</span>
+              <li>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="haklar">
+        <span>© 2M KABLO 2024 - Tüm Hakları Saklıdır</span>
+        <span></span>
+        <a href="#"> KVKK Aydınlatma Metni</a>
+        <span>-</span>
+        <a href="#">Çerezlerin Kullanımı</a>
+        <span>-</span>
+        <a href="#">Gizlilik ve Güvenlik Politikası</a>
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/fbc37fbe24.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
 </html>
