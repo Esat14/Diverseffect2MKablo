@@ -1,599 +1,662 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-color: #f5f5f5;
-    overflow-x: hidden;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .search-window-bytc {
-    color: black;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
-  
-  .search-cancel-btn {
-    display: flex;
-    padding: 10px;
-    cursor: pointer;
-  }
-  .search-bar-btn {
-    display: flex;
-    padding: 10px;
-    cursor: pointer;
-  }
-  .fa-magnifying-glass {
-    font-size: 1.2rem;
-  }
-  .cancel-btn-item {
-    font-size: 2rem;
-  }
-  .search-bar-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: black;
-    gap: 20px;
-  }
-  .search-bar-window {
-    display: none;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: black;
-    padding: 30px 0;
-    opacity: 0.7;
-  }
-  .search-input-div {
-    width: 40%;
-    display: flex;
-    border: 1px solid white;
-    padding: 5px 10px;
-    color: white;
-  }
-  .search-input-div input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: black;
-  }
-  .search-input-div input:focus {
-    outline: none;
-    color: white;
-  }
-  
-  /* Mobil Açılır Menü */
-  .mobileMenu {
-    background-color: white;
-    color: black;
-    display: block;
-    position: absolute;
-    transition: transform 0.5s ease;
-    row-gap: 15px;
-    padding: 10px 10px;
-    font-size: 1.5rem;
-    right: 0;
-    transform: translateX(100vw);  z-index: 100;
-   height: 100%;
-   width: 50%;
-  }
-  
-  .mobileMenu.open {
-    transform: translateX(0);
-  }
-  
-  .mobilMenüTuş {
-    padding: 25px 25px;
-    display: none;
-    position: absolute;
-    cursor: pointer;
-    color: blue;
-    background-color: red;
-  }
-  .hamburger-search-div {
-    width: 100%;
-    background-color: rgb(122, 122, 122);
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    gap: 5px;
-  }
-  .hamburger-search-div input {
-    width: 100%;
-    padding: 5px 5px;
-    background-color: inherit;
-    border: none;
-    color: white;
-  }
-  .hamburger-search-div input:focus {
-    outline: none;
-    color: white;
-  }
-  
-  .HamburgerList {
-    display: grid;
-    row-gap: 20px;
-  }
-  
-  .HamburgerList ul {
-    display: grid;
-    row-gap: 10px;
-  }
-  
-  .mobileMenuBtn {
-    width: min-content;
-    margin: 0 auto;
-    padding: 10px;
-  }
-  
-  .mobileDropdown {
-    display: none;
-    row-gap: 10px;
-    padding-left: 15px;
-    margin: 10px 0;
-  }
-  
-  .mobileMenuBtn {
-    display: flex;
-    justify-content: center;
-    font-size: 2rem;
-  }
-  
-  .tuşfiltre {
-    display: flex;
-    width: 100%;
-    color: white;
-  
-    padding: 15px 10px;
-    font-size: 1em;
-    font-weight: 900;
-  }
-  
-  .mobil-filter-menu-container {
-    display: none;
-    max-width: 1500px;
-    padding: 5px 5px;
-    margin: 140px auto 0 auto;
-    position: relative;
-    row-gap: 10px;
-    justify-items: flex-start;
-    background-color: rgb(53, 53, 53);
-  }
-  
-  .mobile-filter-menu {
-    display: none;
-    width: 100%;
-    background-color: white;
-  }
-  
-  /* Header */
-  
-  header {
-    display: flex;
-    max-width: 1500px;
-    justify-content: center;
-    margin: 0 auto;
-    border-bottom: 1px solid #e0e0e0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .header-container {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    width: 100%;
-    grid-auto-flow: dense;
-    justify-content: center;
-    position: relative;
-    padding: 3rem 1rem;
-    gap: 30px;
-  }
-  
-  .logoContainer {
-    display: flex;
-    max-width: 250px;
-    overflow: hidden;
-  }
-  
-  .header-logo {
-    object-fit: contain;
-    max-width: 100%;
-    max-height: 100%;
-  }
-  
-  .navbar {
-    display: flex;
-    align-items: center;
-    padding: 10px 15px;
-  }
-  
-  .nav-list {
-    display: flex;
-    justify-content: space-around;
-    left: 0;
-    gap: 20px;
-  }
-  
-  .navbar-tools {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-  }
-  
-  /* Main Genel Css */
-  
-  main {
-    display: flex;
-    justify-content: center;
-    /* grid-template-columns: 1fr 3fr; */
-    /* max-width: 1500px; */
-    max-width: 1500px;
-    margin: 140px auto 0 auto;
-    gap: 10px;
-    background-color: #f5f5f5;
-    padding: 10px 0;
-    overflow: hidden;
-  }
-  
-  .fa-plus {
-    color: blue;
-  }
-  
-  /* Sol Filtre Menüsü */
-  .leftSide {
-    display: grid;
-    max-width: 500px;
-    height: min-content;
-    background-color: #e0e0e0;
-    flex: 1 1 25%;
-  }
-  
-  .BreadCrumbDiv {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-  }
-  
-  .BreadCrumbDiv a {
-    text-decoration: none;
-    color: #007bff;
-    margin-right: 5px;
-  }
-  
-  .BreadCrumbDiv span {
-    margin: 0 5px;
-    color: #6c757d;
-  }
-  
-  .BreadCrumbDiv a:hover {
-    text-decoration: underline;
-  }
-  
-  .filterContainer {
-    display: grid;
-  }
-  
-  .FilterList {
-    display: grid;
-    padding: 5px;
-  }
-  
-  .FilterCatergory {
-    display: grid;
-    padding: 5px;
-  }
-  
-  .FilteredCategoryHeading {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .FilterCategoryCaption {
-    color: #005faa;
-    font-size: bold;
-  }
-  
-  .CategoryElement {
-    display: grid;
-    gap: 5px;
-    padding: 5px;
-  }
-  
-  .toggle-button {
-    background: none;
-    cursor: pointer;
-  }
-  
-  .filter-options {
-    display: block;
-    padding: 10px;
-    background-color: #e0e0e0;
-  }
-  
-  .filter-options li {
-    margin-bottom: 8px;
-  }
-  
-  /* Ürün Listesi */
-  
-  .mainContent {
-    flex: 3 1 75%;
-    padding: 10px;
-    display: grid;
-    gap: 20px;
-    background-color: #f5f5f5;
-  }
-  
-  .productsTopBar {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 60px;
-  }
-  
-  .productsHeading h2 {
-    font-weight: 900;
-  }
-  
-  .productsFilterTools {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .ProductsTable {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin: 0 auto;
-    flex-wrap: wrap;
-    gap: 30px;
-    row-gap: 40px;
-  }
-  
-  .productCard {
-    display: grid;
-    padding: 10px;
-    text-align: center;
-    background-color: #e0e0e0;
-    width: 300px;
-  }
-  
-  .productBox {
-    display: grid;
-    gap: 10px;
-    padding: 10px;
-  }
-  
-  .productCard img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-  
-  .productCard img:hover {
-    transform: scale(1.1);
-    transition: transform 0.5s;
-  }
-  
-  .productOptions {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .pdfDowlands {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: inherit;
-    gap: 15px;
-    padding: 10px 20px;
-    border: 1px solid blue;
-    color: black;
-  }
-  
-  .pdfDowlands:hover {
-    background-color: black;
-    color: white;
-    border: black;
-  }
-  
-  .payNowBtn {
-    background-color: #0067b3;
-    border: none;
-    padding: 10px 20px;
-    color: white;
-  }
-  
-  .payNowBtn:hover {
-    background-color: black;
-    color: white;
-    border: black;
-  }
-  
-  /* Daha Fazla Keşfedin Kısmı */
-  .discovered-more-container {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    place-items: center;
-    gap: 20px;
-    padding: 20px 0;
-    max-width: 1500px;
-    margin: 0 auto;
-  }
-  .discovered-more-container h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-  }
-  
-  .list-type-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .list-style {
-    border: 2px solid black;
-    padding: 3px;
-  }
-  .discovered-more {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(150px, 1fr));
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .discovered {
-    display: grid;
-    position: relative;
-    width: 80%;
-  }
-  
-  .discoveredimg {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    filter: brightness(50%);
-  }
-  
-  .discoveredimg:hover {
-    filter: brightness(100%);
-    transition: 0.5s;
-    scale: 1.1;
-  }
-  
-  .discoveredH3 {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-  }
-  
-  .discoveredH2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-  }
-  
-  /* Footer */
-  footer {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    background-color: #0067b3;
-    color: white;
-    padding: 20px 0;
-    row-gap: 20px;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    max-width: 1500px;
-    margin: 0 auto;
-  }
-  
-  .footer-colm1 {
-    display: grid;
-    gap: 10px;
-    flex: 1;
-  }
-  
-  .footer-colm1 h2 {
-    font-size: 1.5rem;
-  }
-  
-  .footer-colm1 ul {
-    display: grid;
-    row-gap: 10px;
-  }
-  
-  .footer-mail-input-Container input,
-  button {
-    background-color: inherit;
-    border: none;
-    color: white;
-    padding: 5px 5px;
-  }
-  .footer-mail-input-Container input:focus {
-    outline: none;
-    border: 1px solid white;
-    border-radius: 5px;
-  }
-  
-  .footer-mail-input-Container input::placeholder {
-    color: white;
-  }
-  
-  .social-media-list {
-    display: grid;
-    margin-top: 20px;
-    grid-template-columns: repeat(7, 1fr);
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.search-window-bytc {
+  color: black;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.search-cancel-btn {
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+}
+.search-bar-btn {
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+}
+.fa-magnifying-glass {
+  font-size: 1.2rem;
+}
+.cancel-btn-item {
+  font-size: 2rem;
+}
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+  gap: 20px;
+}
+.search-bar-window {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+  padding: 30px 0;
+  opacity: 0.7;
+}
+.search-input-div {
+  width: 40%;
+  display: flex;
+  border: 1px solid white;
+  padding: 5px 10px;
+  color: white;
+}
+.search-input-div input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+}
+.search-input-div input:focus {
+  outline: none;
+  color: white;
+}
+
+/* Mobil Açılır Menü */
+.mobileMenu {
+  background-color: white;
+  color: black;
+  display: none;
+  position: absolute;
+  transition: transform 0.5s ease;
+  row-gap: 15px;
+  padding: 10px 10px;
+  font-size: 1.5rem;
+  right: 0;
+  transform: translateX(100vw);
+  z-index: 100;
+  height: 100%;
+  width: 50%;
+}
+
+.mobileMenu.open {
+  transform: translateX(0);
+}
+
+.mobilMenüTuş {
+  padding: 25px 25px;
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  color: blue;
+  background-color: red;
+}
+.hamburger-search-div {
+  width: 100%;
+  background-color: rgb(122, 122, 122);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
+}
+.hamburger-search-div input {
+  width: 100%;
+  padding: 5px 5px;
+  background-color: inherit;
+  border: none;
+  color: white;
+}
+.hamburger-search-div input:focus {
+  outline: none;
+  color: white;
+}
+
+.HamburgerList {
+  display: grid;
+  row-gap: 20px;
+}
+
+.HamburgerList ul {
+  display: grid;
+  row-gap: 10px;
+}
+
+.mobileMenuBtn {
+  width: min-content;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.mobileDropdown {
+  display: none;
+  row-gap: 10px;
+  padding-left: 15px;
+  margin: 10px 0;
+}
+
+.mobileMenuBtn {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+}
+
+.tuşfiltre {
+  display: flex;
+  width: 100%;
+  color: white;
+
+  padding: 15px 10px;
+  font-size: 1em;
+  font-weight: 900;
+}
+
+.mobil-filter-menu-container {
+  display: none;
+  max-width: 1500px;
+  padding: 5px 5px;
+  margin: 140px auto 0 auto;
+  position: relative;
+  row-gap: 10px;
+  justify-items: flex-start;
+  background-color: rgb(53, 53, 53);
+}
+
+.mobile-filter-menu {
+  display: none;
+  width: 100%;
+  background-color: white;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  max-width: 1500px;
+  justify-content: center;
+  border-bottom: 1px solid #e0e0e0;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid red;
+}
+
+
+
+.header-container {
+  display: flex;
+  /* flex-wrap: wrap; */
+  /* grid-template-columns: 1fr 2fr 1fr; */
+  width: 100%;
+  position: relative;
+  padding: 3rem 1rem;
+  gap: 30px;
+}
+
+
+.logoContainer {
+  display: flex;
+  flex: 1 25%;
+  max-width: 250px;
+  overflow: hidden;
+}
+
+.header-logo {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  flex: 50%;
+  margin: 0 auto;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  left: 0;
+  gap: 20px;
+}
+
+.navbar-tools {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex: 1 25%;
+}
+
+/* Main Genel Css */
+
+main {
+  display: flex;
+  /* justify-content: center; */
+  /* grid-template-columns: 1fr 3fr; */
+  /* max-width: 1500px; */
+  max-width: 1500px;
+  margin: 140px auto 0 auto;
+  gap: 10px;
+  background-color: #f5f5f5;
+  padding: 10px 0;
+  overflow: hidden;
+}
+
+.fa-plus {
+  color: blue;
+}
+
+/* Sol Filtre Menüsü */
+.leftSide {
+  flex: 1 25%;
+  display: grid;
+  max-width: 500px;
+  height: min-content;
+  background-color: #e0e0e0;
+  flex: 1 1 25%;
+}
+
+.BreadCrumbDiv {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.BreadCrumbDiv a {
+  text-decoration: none;
+  color: #007bff;
+  margin-right: 5px;
+}
+
+.BreadCrumbDiv span {
+  margin: 0 5px;
+  color: #6c757d;
+}
+
+.BreadCrumbDiv a:hover {
+  text-decoration: underline;
+}
+
+.filterContainer {
+  display: grid;
+}
+
+.FilterList {
+  display: grid;
+  padding: 5px;
+}
+
+.FilterCatergory {
+  display: grid;
+  padding: 5px;
+}
+
+.FilteredCategoryHeading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.FilterCategoryCaption {
+  color: #005faa;
+  font-size: bold;
+}
+
+.CategoryElement {
+  display: grid;
+  gap: 5px;
+  padding: 5px;
+}
+
+.toggle-button {
+  background: none;
+  cursor: pointer;
+}
+
+.filter-options {
+  display: block;
+  padding: 10px;
+  background-color: #e0e0e0;
+}
+
+.filter-options li {
+  margin-bottom: 8px;
+}
+
+/* Ürün Listesi */
+
+.mainContent {
+  flex: 1 75%;
+  padding: 10px;
+  display: grid;
+  gap: 20px;
+  background-color: #f5f5f5;
+}
+
+.productsTopBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+
+.productsHeading h2 {
+  font-weight: 900;
+}
+
+.productsFilterTools {
+  display: flex;
+  gap: 20px;
+}
+
+.ProductsTable {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 30px;
+  row-gap: 40px;
+}
+
+.productCard {
+  display: grid;
+  padding: 10px;
+  text-align: center;
+  background-color: #e0e0e0;
+  width: 300px;
+}
+
+.productBox {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+}
+
+.productCard img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.productCard img:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+
+.productOptions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pdfDowlands {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  gap: 15px;
+  padding: 10px 20px;
+  border: 1px solid blue;
+  color: black;
+}
+
+.pdfDowlands:hover {
+  background-color: black;
+  color: white;
+  border: black;
+}
+
+.payNowBtn {
+  background-color: #0067b3;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+}
+
+.payNowBtn:hover {
+  background-color: black;
+  color: white;
+  border: black;
+}
+
+/* Daha Fazla Keşfedin Kısmı */
+.discovered-more-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  place-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.discovered-more-container h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.list-type-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list-style {
+  border: 2px solid black;
+  padding: 3px;
+}
+.discovered-more {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.discovered {
+  display: grid;
+  position: relative;
+  width: 80%;
+}
+
+.discoveredimg {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(50%);
+}
+
+.discoveredimg:hover {
+  filter: brightness(100%);
+  transition: 0.5s;
+  scale: 1.1;
+}
+
+.discoveredH3 {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.discoveredH2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+/* Footer */
+footer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: #0067b3;
+  color: white;
+  padding: 20px 0;
+  row-gap: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.footer-colm1 {
+  display: grid;
+  gap: 10px;
+  flex: 1;
+}
+
+.footer-colm1 h2 {
+  font-size: 1.5rem;
+}
+
+.footer-colm1 ul {
+  display: grid;
+  row-gap: 10px;
+}
+
+.footer-mail-input-Container input,
+button {
+  background-color: inherit;
+  border: none;
+  color: white;
+  padding: 5px 5px;
+}
+.footer-mail-input-Container input:focus {
+  outline: none;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.footer-mail-input-Container input::placeholder {
+  color: white;
+}
+
+.social-media-list {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: repeat(7, 1fr);
+}
+.nav-products-options {
+  background-color: rgba(48, 48, 48, 0.98);
+  display: none;
+  row-gap: 10px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  color: white;
+  margin-top: 10px;
+  position: absolute;
+  width: 100%;
+}
+.nav-products-options li {
+  padding: 5px;
+}
+
+.nav-products-options li:nth-last-child(1) {
+  padding: 15px 15px 5px 15px;
+  border-top: 1px solid white;
+}
+.nav-products-options li:hover {
+  background-color: black;
+}
+.has-dropwdown {
+  position: relative;
+}
+
+.nav-list-el:nth-child(2):hover {
   .nav-products-options {
-    background-color: rgba(48, 48, 48, 0.98);
-    display: none;
-    row-gap: 10px;
-    padding: 10px 10px;
-    border-radius: 10px;
-    color: white;
-    margin-top: 10px;
-    position: absolute;
-    width: 100%;
-  }
-  .nav-products-options li {
-    padding: 5px;
-  }
-  
-  .nav-products-options li:nth-last-child(1) {
-    padding: 15px 15px 5px 15px;
-    border-top: 1px solid white;
-  }
-  .nav-products-options li:hover {
-    background-color: black;
-  }
-  .has-dropwdown {
-    position: relative;
-  }
-  
-  .nav-list-el:nth-child(2):hover {
-    .nav-products-options {
-      display: grid;
-    }
-  }
-  
-  .nav-products-katalog {
-    background-color: #0067b3;
-    display: flex;
-    padding: 10px 50px;
-  }
-  .social-media-group-hamburger {
     display: grid;
   }
-  .social-media-group-hamburger ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+}
+
+.nav-products-katalog {
+  background-color: #0067b3;
+  display: flex;
+  padding: 10px 50px;
+}
+.social-media-group-hamburger {
+  display: grid;
+}
+.social-media-group-hamburger ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+@media (max-width: 800px) {
+  .ProductsTable {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    gap: 20px;
   }
-  
+  .leftSide {
+    display: none;
+  }
+  .mobil-filter-menu-container {
+    display: block;
+  }
+  .filter-options {
+    background-color: white;
+  }
+}
+@media (max-width: 1200px) {
+  .ProductsTable {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    display: none;
+  }
+  .navbar-tools {
+    display: none;
+  }
+  .mobilMenüTuş {
+    display: block;
+    top: 50%;
+    right: 10%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+    header {
+      display: flex;
+      flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 600px) {
+  .ProductsTable {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+}
