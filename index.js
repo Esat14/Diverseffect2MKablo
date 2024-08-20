@@ -13,20 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// document.querySelector('.mobilMenüTuş').addEventListener('click', function () {
-//   const menu = document.querySelector('.mobileMenu');
-//   const buttonIcon = document.querySelector('.mobilMenüTuş i');
 
-//   if (menu.style.right === '0px') {
-//     menu.style.right = '-500px';
-//     buttonIcon.classList.remove('fa-x');
-//     buttonIcon.classList.add('fa-bars');
-//   } else {
-//     menu.style.right = '0';
-//     buttonIcon.classList.remove('fa-bars');
-//     buttonIcon.classList.add('fa-x');
-//   }
-// });
 
 document.querySelector('.mobilMenüTuş').addEventListener('click', function () {
     const menu = document.querySelector('.mobileMenu');
