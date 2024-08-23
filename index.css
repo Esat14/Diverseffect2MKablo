@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: #fff;
   overflow-x: hidden;
 }
 
@@ -141,7 +141,7 @@ a {
 }
 
 .mobileDropdown {
-  display: block;
+  display: none;
   row-gap: 10px;
   padding-left: 15px;
   margin: 10px 0;
@@ -191,8 +191,6 @@ header {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
-
 .header-container {
   display: flex;
   /* flex-wrap: wrap; */
@@ -202,7 +200,6 @@ header {
   padding: 3rem 1rem;
   gap: 30px;
 }
-
 
 .logoContainer {
   display: flex;
@@ -245,17 +242,17 @@ header {
 
 main {
   display: flex;
-  /* justify-content: center; */
-  /* grid-template-columns: 1fr 3fr; */
-  /* max-width: 1500px; */
+
   max-width: 1500px;
-  margin: 140px auto 0 auto;
+  margin: 0 auto 0 auto;
+  background-color: white;
   gap: 10px;
-  background-color: #f5f5f5;
   padding: 10px 0;
   overflow: hidden;
 }
-
+.fa-minus {
+  color: gray;
+}
 .fa-plus {
   color: blue;
 }
@@ -266,8 +263,8 @@ main {
   display: grid;
   max-width: 500px;
   height: min-content;
-  background-color: #e0e0e0;
   flex: 1 1 25%;
+  background-color: #f6f7f9;
 }
 
 .BreadCrumbDiv {
@@ -329,7 +326,6 @@ main {
 .filter-options {
   display: block;
   padding: 10px;
-  background-color: #e0e0e0;
 }
 
 .filter-options li {
@@ -343,7 +339,7 @@ main {
   padding: 10px;
   display: grid;
   gap: 20px;
-  background-color: #f5f5f5;
+  
 }
 
 .productsTopBar {
@@ -374,8 +370,8 @@ main {
   display: grid;
   padding: 10px;
   text-align: center;
-  background-color: #e0e0e0;
   width: 300px;
+  background-color: #f6f7f9;
 }
 
 .productBox {
@@ -469,7 +465,7 @@ main {
   flex: 1;
   box-sizing: border-box;
   position: relative;
-  /* width: 50%; */
+  max-width: 300px;
 }
 
 .discoveredimg {
@@ -501,12 +497,10 @@ main {
   color: white;
 }
 @media screen and (max-width: 800px) {
-  
-  .discovered{
+  .discovered {
     flex: 1 40%;
   }
 }
-
 
 /* Footer */
 footer {
@@ -612,8 +606,6 @@ button {
   align-items: center;
 }
 
-
-
 @media (max-width: 800px) {
   .ProductsTable {
     grid-template-columns: repeat(2, minmax(200px, 1fr));
@@ -657,15 +649,16 @@ button {
 }
 
 @media (max-width: 700px) {
-    header {
-      display: flex;
-      flex-wrap: wrap;
-    }
+  header {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
-
 
 @media (max-width: 600px) {
   .ProductsTable {
     grid-template-columns: repeat(1, minmax(200px, 1fr));
   }
 }
+
+

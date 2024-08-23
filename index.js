@@ -123,3 +123,6 @@ document.querySelector('.search-cancel-btn').addEventListener('click', function 
     const searchWindowClose = document.querySelector('.search-bar-window');
     searchWindowClose.style.display = 'none';
 });
+
+
+
