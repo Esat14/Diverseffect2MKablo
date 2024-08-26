@@ -12,9 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-
-
 document.querySelector('.mobilMenüTuş').addEventListener('click', function () {
     const menu = document.querySelector('.mobileMenu');
     const buttonIcon = document.querySelector('.mobilMenüTuş i');
@@ -25,20 +22,26 @@ document.querySelector('.mobilMenüTuş').addEventListener('click', function () 
         buttonIcon.classList.add('fa-bars');
     } else {
         menu.classList.add('open');
+        menu.style.display = 'block';
         buttonIcon.classList.remove('fa-bars');
         buttonIcon.classList.add('fa-x');
     }
 });
 
+window.addEventListener('resize', function () {
+    const menu = document.querySelector('.mobileMenu');
+    const button = document.querySelector('.mobilMenüTuş');
 
-
+    if (window.getComputedStyle(button).display === 'none') {
+        menu.classList.remove('open');
+        menu.style.display = 'none';
+    }
+});
 
 document.querySelector('.tuşfiltre').addEventListener('click', function () {
     const dropdownMenu = document.querySelector('.mobile-filter-menu');
     dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
 });
-
-
 
 document.querySelector('.list-style-row').addEventListener('click', function () {
     switchToListView();
