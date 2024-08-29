@@ -129,3 +129,12 @@ document.querySelector('.search-cancel-btn').addEventListener('click', function 
 
 
 
+document.querySelector('.nav-list-element').addEventListener('mouseenter', function () {
+    const underMenu = document.querySelector('.nav-products-options');
+    underMenu.style.display = 'grid';
+    
+});
+document.querySelector('.nav-list-element').addEventListener('mouseleave', function () {
+    const underMenu = document.querySelector('.nav-products-options');
+    underMenu.style.display = 'none';
+});

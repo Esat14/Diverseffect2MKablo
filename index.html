@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/media.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/index.css" />
 
     <title>Document</title>
   </head>
-  <!-- <i class="fa-solid fa-bars"></i> -->
 
   <body>
     <header>
@@ -21,9 +21,9 @@
         <div class="navbar header-container-item">
           <ul class="nav-list">
             <li class="nav-list-el"><a href="#">KURUMSAL</a></li>
-            <li class="nav-list-el has-dropdown">
+            <li class="nav-list-element">
               <a href="#">ÜRÜNLER</a>
-              <ul class="nav-products-options">
+              <!-- <ul class="nav-products-options">
                 <li><a href="#">Enstrumantasyon Kabloları</a></li>
                 <li><a href="#">Kontrol Kabloları</a></li>
                 <li><a href="#">Enerji Kabloları</a></li>
@@ -36,7 +36,7 @@
                 <li>
                   <button class="nav-products-katalog">KATALOĞU GÖR</button>
                 </li>
-              </ul>
+              </ul> -->
             </li>
             <li class="nav-list-el"><a href="#">ÜRETİM</a></li>
             <li class="nav-list-el"><a href="#">MEDYA</a></li>
@@ -313,6 +313,21 @@
     </div>
     <main>
       <div class="leftSide">
+        <ul class="nav-products-options">
+          <li><a href="#">Enstrumantasyon Kabloları</a></li>
+          <li><a href="#">Kontrol Kabloları</a></li>
+          <li><a href="#">Enerji Kabloları</a></li>
+          <li><a href="#">Gemi & Yat Kabloları</a></li>
+          <li><a href="#">Dahili Telefon ve Yangın Kabloları</a></li>
+          <li><a href="#">Bilgi İletişim Kabloları</a></li>
+          <li><a href="#">BUS Kablolar</a></li>
+          <li><a href="#">Servo Motor Kabloları</a></li>
+          <li><a href="#">Koaksiyel Kablolar</a></li>
+          <li>
+            <button class="nav-products-katalog">KATALOĞU GÖR</button>
+          </li>
+        </ul>
+
         <!-- <div class="BreadCrumbDiv" id="BreadCrumbDiv"></div> -->
         <div class="filterContainer">
           <ul class="FilterList">
@@ -509,7 +524,7 @@
             <div>
               <span class="archive-sort">
                 <label for="arrangement">SIRALAMA</label>
-                <select name="arrangement" >
+                <select name="arrangement">
                   <option class="option" selected="" value="01">A-Z</option>
                   <option class="option" value="02">Z-A</option>
                 </select>
