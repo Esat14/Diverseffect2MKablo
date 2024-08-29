@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Gotham", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
 body {
   background-color: #fff;
   overflow-x: hidden;
@@ -90,8 +99,6 @@ a {
   width: 40%;
 }
 
-
-
 .mobileMenu.open {
   transform: translateX(0);
 }
@@ -127,7 +134,6 @@ a {
 }
 
 .HamburgerList {
-  display: grid;
   row-gap: 20px;
 }
 
@@ -199,7 +205,7 @@ header {
   /* grid-template-columns: 1fr 2fr 1fr; */
   width: 100%;
   position: relative;
-  padding: 3rem 1rem;
+  padding: 3rem 1rem 1rem 1rem;
   gap: 30px;
 }
 
@@ -244,14 +250,23 @@ header {
 
 main {
   display: flex;
-
   max-width: 1500px;
   margin: 0 auto 0 auto;
   background-color: white;
   gap: 10px;
-  padding: 10px 0;
   overflow: hidden;
 }
+.leftSide::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: #f6f7f9;
+  z-index: -1;
+  left: 0;
+  height: 910px;
+}
+
 .fa-minus {
   color: gray;
 }
@@ -338,10 +353,9 @@ main {
 
 .mainContent {
   flex: 1 75%;
-  padding: 10px;
+  padding: 30px 0;
   display: grid;
   gap: 20px;
-  
 }
 
 .productsTopBar {
@@ -357,6 +371,8 @@ main {
 .productsFilterTools {
   display: flex;
   gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .ProductsTable {
@@ -407,6 +423,7 @@ main {
   padding: 10px 20px;
   border: 1px solid blue;
   color: black;
+  height: 25px;
 }
 
 .pdfDowlands:hover {
@@ -420,6 +437,10 @@ main {
   border: none;
   padding: 10px 20px;
   color: white;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .payNowBtn:hover {
@@ -586,6 +607,7 @@ button {
 }
 .has-dropwdown {
   position: relative;
+  
 }
 
 .nav-list-el:nth-child(2):hover {
@@ -598,6 +620,7 @@ button {
   background-color: #0067b3;
   display: flex;
   padding: 10px 50px;
+
 }
 .social-media-group-hamburger {
   display: grid;
@@ -625,7 +648,12 @@ button {
 }
 @media (max-width: 1200px) {
   .ProductsTable {
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+}
+@media (max-width: 1300px){
+  .productCard {
+    width: 250px;
   }
 }
 
@@ -642,9 +670,20 @@ button {
     right: 10%;
     transform: translate(-50%, -50%);
   }
+  .productCard {
+    width: 200px;
+  }
+  .ProductsTable {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 30px;
+    row-gap: 20px;
+  }
+
+  
 }
-
-
 
 @media (max-width: 900px) {
   .navbar {
@@ -664,5 +703,3 @@ button {
     grid-template-columns: repeat(1, minmax(200px, 1fr));
   }
 }
-
-
